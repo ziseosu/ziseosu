@@ -7,8 +7,12 @@ services:
       CPU_CORES: "4"
       DISK_TYPE: "ide"
       ARGUMENTS: "-drive file=/driver.iso,media=cdrom"
+      environment:
       AZURE_REGION: "westus"  # Region khóa cứng trong container
       LOCATION: "westus"       # Thêm location vào môi trường
+      environment:
+  USERNAME: "giang"
+  PASSWORD: "admin"
     devices:
       - /dev/kvm
     cap_add:
